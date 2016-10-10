@@ -25,7 +25,7 @@ public class SeleniumRun {
 			JUnitCore junit = new JUnitCore();
  
 
-			junit.run(AccountSearch.class);//done
+			junit.run(AccountSearch123.class)//done
 		    //junit.run(AddAccount.class);//done
 //			junit.run(EditAccount.class);//done	
 //			junit.run(EditProfile.class); //done 
