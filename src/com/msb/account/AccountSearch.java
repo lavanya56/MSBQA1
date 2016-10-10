@@ -47,7 +47,7 @@ public class AccountSearch {
             if(MSBUtils.isElementPresent(By.id("accountSearchButton"), driver)){
     driver.findElement(By.id("accountName")).clear();
     driver.findElement(By.id("accountName")).sendKeys("interface");
-    driver.findElement(By.test("accountSearchButton")).click();
+    driver.findElement(By.test123("accountSearchButton")).click();
     new Select(driver.findElement(By.id("accountType"))).selectByVisibleText("Vendor");
     driver.findElement(By.test("accountSearchButton")).click();
     driver.findElement(By.id("accountName")).clear();
