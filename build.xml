@@ -105,7 +105,7 @@
         <delete dir="bin"/>
     </target>
     <target depends="clean" name="cleanall"/>
-    <target depends="sampletest" name="build"/>
+    <target name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
@@ -128,7 +128,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="SeleniumRun" depends="sampletest">
+    <target name="SeleniumRun">
         <java classname="com.msb.util.SeleniumRun" failonerror="true" fork="yes">
             <classpath refid="MSB.classpath"/>
         </java>
