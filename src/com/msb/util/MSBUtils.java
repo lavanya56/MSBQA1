@@ -559,7 +559,26 @@ System.out.println("Inside if");
 	 * in the entire test script
 	 */
 	
-
+	public static WebDriver getDriver() {
+		if (driver == null) {
+			//System.out.println("running from Selenium");
+			try{
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+//			String baseUrl = "http://172.17.0.164:8080/";
+			String baseUrl = "http://192.168.1.239:8080/";
+			driver.get(baseUrl + "msb/");
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			return driver;
+		} else {
+			return driver;
+		}
+	}
 	public static String LoginSauce(String UserId, WebDriver driver) {
 		String returnvalue = "";
 		// System.out.println("Login page==============================" +
